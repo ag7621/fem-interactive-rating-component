@@ -1,0 +1,126 @@
+:root {
+
+    /* colors */
+    --orange: hsl(25, 97%, 53%);
+
+    --white: hsl(0, 0%, 100%);
+    --lt-grey: hsl(217, 12%, 63%);
+    --med-grey: hsl(216, 12%, 54%);
+    --dk-blue: hsl(213, 19%, 18%);
+    --very-dk-blue: hsl(216, 12%, 8%);
+
+    /* components */
+    --clr-main-bg: var(--very-dk-blue);
+    --clr-card-bg: var(--dk-blue);
+
+    --clr-text-heading: var(--white);
+    --clr-text-primary: var(--lt-grey);
+
+    --clr-button-primary: var(--orange);
+    --clr-button-active: var(--white);
+
+    /* font-size */
+    --fs-400: 0.938rem;
+    --fs-700: 1.75rem;
+
+    /* font-weight */
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* styling */
+
+body {
+    background-color: var(--clr-main-bg);
+    color: var(--clr-text-primary);
+    font-family: 'Overpass', sans-serif;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-card-bg);
+    max-width: 25.75rem;
+    padding: 2rem;
+}
+
+.icon {
+    background-color: teal;
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.card__title {
+    color: var(--clr-text-heading);
+    font-size: var(--fs-700);
+}
+
+button {
+    background-color: var(--clr-button-primary);
+    color: var(--clr-text-heading);
+    border-radius: 50px;
+    border: none;
+    padding: 0.688rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
