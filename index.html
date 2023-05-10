@@ -18,26 +18,26 @@
 <body>
     <main>
         <section class="card">
-            <div class="card__icon">
-                <img src="/images/icon-star.svg" alt="">
+            <div>
+                <img class="icon" src="/images/icon-star.svg" alt="">
             </div>
             <h1 class="card__title">How did we do?</h1>
             <p class="card__text">
                 Please let us know how we did with your support request. All feedback is appreciated to help us imporove
                 our offering!
             </p>
-            <div class="rating"></div>
-            <form action="">
-                <input type="radio" name="rating" id="one">
-                <label for="one">1</label>
-                <input type="radio" name="rating" id="two">
-                <label for="two">2</label>
-                <input type="radio" name="rating" id="three">
-                <label for="three">3</label>
-                <input type="radio" name="rating" id="four">
-                <label for="four">4</label>
-                <input type="radio" name="rating" id="five">
-                <label for="five">5</label>
+            <!-- <div class="rating"></div> -->
+            <form class="rating-form">
+                <input id="rating1" type="radio" name="rating-group" value="1">
+                <label for="rating1">1</label>
+                <input id="rating2" type="radio" name="rating-group" value="2">
+                <label for="rating2">2</label>
+                <input id="rating3" type="radio" name="rating-group" value="3">
+                <label for="rating3">3</label>
+                <input id="rating4" type="radio" name="rating-group" value="4">
+                <label for="rating4">4</label>
+                <input id="rating5" type="radio" name="rating-group" value="5">
+                <label for="rating5">5</label>
             </form>
             <button>Submit</button>
         </section>
