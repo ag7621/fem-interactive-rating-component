@@ -150,6 +150,7 @@ input[type=radio] {
 
 input[type=radio]:focus+label {
     border: 2px solid blue;
+    box-shadow: 0 0 0 3px white;
 }
 
 input[type=radio]:checked+label {
@@ -161,7 +162,6 @@ input[type=radio]:hover+label {
     cursor: pointer;
     background-color: var(--clr-circle-hover);
     color: var(--clr-text-heading);
-
 }
 
 label {
