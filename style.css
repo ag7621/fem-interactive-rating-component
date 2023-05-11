@@ -28,6 +28,7 @@
     --fs-400: 0.938rem;
     --fs-500: 1.063rem;
     --fs-700: 1.75rem;
+    --fs-800: 1.875rem;
 
     /* font-weight */
     --fw-regular: 400;
@@ -100,13 +101,21 @@ body {
 
     display: grid;
     place-content: center;
+    /* justify-content: center; */
 }
 
-.card {
+section {
     display: flex;
     flex-direction: column;
     background-color: var(--clr-card-bg);
+    border-radius: 30px;
     max-width: 25.75rem;
+
+}
+
+/* rating card */
+
+.card--rating {
     padding: 2rem 2.438rem 2rem 2rem;
 }
 
@@ -119,19 +128,28 @@ body {
 .card__title {
     color: var(--clr-text-heading);
     font-size: var(--fs-700);
+    margin: 1.813rem 0 0.375rem;
 }
 
-.card__text {
+.card__text--rating {
     line-height: 1.65;
 }
 
 .rating-form {
     display: flex;
     justify-content: space-between;
+    margin: 1.625rem 0 2rem;
 }
 
 input[type=radio] {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+input[type=radio]:focus+label {
+    border: 2px solid blue;
 }
 
 input[type=radio]:checked+label {
@@ -143,6 +161,7 @@ input[type=radio]:hover+label {
     cursor: pointer;
     background-color: var(--clr-circle-hover);
     color: var(--clr-text-heading);
+
 }
 
 label {
@@ -155,6 +174,8 @@ label {
     aspect-ratio: 1/1;
     font-size: var(--fs-500);
     font-weight: var(--fw-bold);
+    transition: all 250ms ease-in-out;
+
 }
 
 button {
@@ -163,12 +184,53 @@ button {
     color: var(--clr-text-heading);
     border-radius: 50px;
     border: none;
-    padding: 0.688rem;
+    padding: 0.7rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+    transition: all 250ms ease-in-out;
 }
 
 button:hover {
     background-color: var(--clr-button-active);
     color: var(--clr-button-primary);
+}
+
+/* success card */
+
+.card--success {
+    padding: 2.813rem 2.125rem 3rem 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.card--score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-circle-primary);
+    color: var(--clr-button-primary);
+    border-radius: 20px;
+    height: 2rem;
+    width: 11.938rem;
+    margin: 2.063rem 0 1.813rem;
+}
+
+.card--score p {
+    margin-bottom: -3px;
+}
+
+.card__subtitle {
+    color: var(--clr-text-heading);
+    font-size: var(--fs-800);
+}
+
+.card__text--success {
+    margin-top: 0.375rem;
+    line-height: 1.6;
+}
+
+/* utility */
+
+.hidden {
+    display: none;
 }
